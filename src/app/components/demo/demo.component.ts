@@ -73,21 +73,21 @@ export class DemoComponent implements OnInit {
   selects = {
     calendar: ["gregorian", "jalali"],
     theme: ["light", "dark"],
-    format: ["MM/DD/YYYY", "DD/MM/YYYY", "MM-DD-YYYY", "DD-MM-YYYY"],
+    format: ["MM/DD/YYYY", "DD/MM/YYYY", "MM-DD-YYYY", "DD-MM-YYYY", "YYYY/MM/DD",  "YYYY-MM-DD"],
     rounded: [false, "medium", "full"]
   }
 
   dateControl = new FormControl('');
   customDateControl = new FormControl('');
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.configForm.valueChanges.subscribe(value => {
       this.isDefaultConfig = false
       this.customConfig = value
       this.dateControl.setValue("")
     })
   }
-  
+
   select(e: any){
     console.log(e)
   }

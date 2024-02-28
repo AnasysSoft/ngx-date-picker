@@ -11,7 +11,7 @@ export default class DateTransform {
         let { year, month: m, day: d } = new DateInfo(calendarType).getInfoOfDate(this.date)
 
         // months starts from 0 index
-        m += 1; 
+        m += 1;
 
         let month = m.toString().padStart(2, "0")
         let day = d.toString().padStart(2, "0")
@@ -29,6 +29,12 @@ export default class DateTransform {
             break;
 
             case "DD/MM/YYYY": result = [day, month, year].join("/");
+            break;
+
+          case "YYYY/MM/DD": result = [year, month, day].join("/");
+            break;
+
+          case "YYYY-MM-DD": result = [year, month, day].join("-");
             break;
         }
 

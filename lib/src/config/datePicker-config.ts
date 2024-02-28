@@ -60,7 +60,7 @@ export type DatepickerEvents = "closeDatepicker"
 
 // DatePicker configs
 
-export type ValueFormat = "MM/DD/YYYY" | "MM-DD-YYYY" | "DD-MM-YYYY" | "DD/MM/YYYY"
+export type ValueFormat = "MM/DD/YYYY" | "MM-DD-YYYY" | "DD-MM-YYYY" | "DD/MM/YYYY" | "YYYY/MM/DD" | "YYYY-MM-DD"
 export interface OutputEventConfig {
     date: boolean,
     type: boolean,
@@ -95,7 +95,7 @@ export type CustomConfig = DeepPartial<GlobalConfig>
 
 export const DefaultGlobalConfig: GlobalConfig = {
     calendar: "gregorian",
-    format: "DD/MM/YYYY",
+    format: "YYYY-MM-DD",
     outputData: {
         date: true,
         type: false,
